@@ -186,7 +186,7 @@
 	</div>
 	<div class="flex items-center justify-around max-w-sm mx-auto">
 		<form class="inline align-middle">
-			<select bind:value={selected} on:select={() => updateSelection()}
+			<select bind:value={selected} on:change={updateSelection}
 							class="border text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500">
 				<option selected value="device">Device</option>
 				<option value="emulator">Emulator</option>
