@@ -15,9 +15,9 @@ function parseAPIData(apiData) {
   return { timestamps, temperatures, humidities, pressures };
 }
 
-export async function fetchData() {
+export async function fetchData(url) {
   try {
-    const response = await fetch('https://whcfbb8xff.execute-api.eu-west-1.amazonaws.com/prod/get50records');
+    const response = await fetch(url);
 
     if (!response.ok) {
       throw new Error(`Network response was not ok (${response.status})`);
